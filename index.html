@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tippmix Tippek | Napi foci tippek és szelvények</title>
+    <meta name="description" content="Napi Tippmix tippek a Premier League, Bundesliga és NB I meccseire. West Ham, Dortmund, Everton tippek összesített odds-szal.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+      body { font-family: 'Poppins', sans-serif; background: linear-gradient(to bottom right, #f0fdf4, #ffffff); }
+      .fade-in { animation: fadeIn 1s ease forwards; }
+      @keyframes fadeIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);} }
+      .btn { transition: all 0.3s ease; }
+      .btn:hover { transform: scale(1.05); background-color: #15803d; }
+    </style>
+  </head>
+
+  <body class="flex flex-col items-center px-6">
+
+    <!-- Kezdőlap -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center">
+      <div class="fade-in mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 mx-auto text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Tippmix Tippek logó">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4m5 2a9 9 0 11-18 0a9 9 0 0118 0z" />
+        </svg>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800 fade-in">Tippmix Tippek</h1>
+      <p class="text-lg text-slate-600 mt-4 fade-in max-w-xl">
+        Napi focitippek és szelvényajánlók a Premier League, Bundesliga és NB I meccseire.
+      </p>
+      <a href="#tippek" class="mt-8 inline-block bg-green-600 text-white font-semibold px-6 py-3 rounded-xl shadow-md btn fade-in">
+        Nézd meg a mai tippeket →
+      </a>
+    </section>
+
+    <!-- Tippmix tippek -->
+    <section id="tippek" class="w-full max-w-5xl fade-in py-12">
+      <h2 class="text-3xl font-bold mb-6 text-green-800">💰 Mai Tippmix Tippek</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Tipp 1 -->
+        <div class="bg-white border rounded-xl p-4 shadow hover:shadow-md transition">
+          <h3 class="font-semibold text-lg">Nyíregyháza-Puskás Akadémia</h3>
+          <p class="text-sm text-slate-600 mt-1">NB 1 • 2025.11.09</p>
+          <p class="mt-3"><strong>Tipp:</strong>Döntetlen vagy Puskás Akadémia,Hazai csapat gólszám 0,5 fölött</p>
+          <p><strong>Odds:</strong> 2,32</p>
+          <p class="text-green-600 font-medium mt-2">Indoklás:Erősebb a Puskás Akadémia,de a Nyíregyháza otthon szinte mindig lő gólt</p>
+        </div>
+
+        <!-- Tipp 2 -->
+        <div class="bg-white border rounded-xl p-4 shadow hover:shadow-md transition">
+          <h3 class="font-semibold text-lg">Manchester City-Liverpool</h3>
+          <p class="text-sm text-slate-600 mt-1">Premier League • 2025.11.09</p>
+          <p class="mt-3"><strong>Tipp:</strong> Erling Haaland 1+ (Kezdőként hány gólt szerez?)</p>
+          <p><strong>Odds:</strong> 1,63</p>
+          <p class="text-green-600 font-medium mt-2">Indoklás:Haaland formában van,és nagy meccseken is gyakran betalál.</p>
+        </div>
+
+        <!-- Tipp 3 -->
+        <div class="bg-white border rounded-xl p-4 shadow hover:shadow-md transition">
+          <h3 class="font-semibold text-lg">E. Frankfurt-Mainz</h3>
+          <p class="text-sm text-slate-600 mt-1">Bundesliga • 2025.11.09</p>
+          <p class="mt-3"><strong>Tipp:</strong> Büntetőlap-szám 3,5 fölött és Mindkét csapat szerez gólt (Igen)</p>
+          <p><strong>Odds:</strong> 2,31</p>
+          <p class="text-green-600 font-medium mt-2">Indoklás: Mindkét csapat elől veszélyes, ezért várható gól mindkét oldalon, 
+          és a kemény játék miatt több lap is lehet.</p>
+        </div>
+      </div>
+      <p class="mt-6 text-right font-semibold text-slate-700">Összesített odds: 8,74</p>
+    </section>
+    <!-- Lábjegyzet -->
+    <footer class="mt-12 text-sm text-slate-500 fade-in text-center pb-6">
+      © <span id="year"></span> Tippmix Tippek | Csak szórakozási célra, felelősséggel fogadj!
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
