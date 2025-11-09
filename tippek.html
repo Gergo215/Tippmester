@@ -43,34 +43,34 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <!-- Tipp 1 -->
         <div class="bg-white border rounded-xl p-4 shadow hover:shadow-md transition">
-          <h3 class="font-semibold text-lg">West Ham United vs Burnley</h3>
-          <p class="text-sm text-slate-600 mt-1">Premier League • 2025.11.08</p>
-          <p class="mt-3"><strong>Tipp:</strong> West Ham nyer és 2. félidőben hazai csapat gólszáma 0,5 felett</p>
-          <p><strong>Odds:</strong> 2,16</p>
-          <p class="text-green-600 font-medium mt-2">Indoklás: A West Ham otthon rendre betalál a második félidőben, Burnley idegenben gyenge védekezésben.</p>
+          <h3 class="font-semibold text-lg">Nyíregyháza-Puskás Akadémia</h3>
+          <p class="text-sm text-slate-600 mt-1">NB 1 • 2025.11.09</p>
+          <p class="mt-3"><strong>Tipp:</strong>Döntetlen vagy Puskás Akadémia,Hazai csapat gólszám 0,5 fölött</p>
+          <p><strong>Odds:</strong> 2,32</p>
+          <p class="text-green-600 font-medium mt-2">Indoklás:Erősebb a Puskás Akadémia,de a Nyíregyháza otthon szinte mindig lő gólt</p>
         </div>
 
         <!-- Tipp 2 -->
         <div class="bg-white border rounded-xl p-4 shadow hover:shadow-md transition">
-          <h3 class="font-semibold text-lg">Hamburg vs Borussia Dortmund</h3>
-          <p class="text-sm text-slate-600 mt-1">Német Kupa • 2025.11.08</p>
-          <p class="mt-3"><strong>Tipp:</strong> Dortmund nyer</p>
-          <p><strong>Odds:</strong> 1,73</p>
-          <p class="text-green-600 font-medium mt-2">Indoklás: A Dortmund motivált, jobb formában, és nagyobb játékerőt képvisel minden téren.</p>
+          <h3 class="font-semibold text-lg">Manchester City-Liverpool</h3>
+          <p class="text-sm text-slate-600 mt-1">Premier League • 2025.11.09</p>
+          <p class="mt-3"><strong>Tipp:</strong> Erling Haaland 1+ (Kezdőként hány gólt szerez?)</p>
+          <p><strong>Odds:</strong> 1,63</p>
+          <p class="text-green-600 font-medium mt-2">Indoklás:Haaland formában van,és nagy meccseken is gyakran betalál.</p>
         </div>
 
         <!-- Tipp 3 -->
         <div class="bg-white border rounded-xl p-4 shadow hover:shadow-md transition">
-          <h3 class="font-semibold text-lg">Everton vs Fulham</h3>
-          <p class="text-sm text-slate-600 mt-1">Premier League • 2025.11.08</p>
-          <p class="mt-3"><strong>Tipp:</strong> Everton vagy döntetlen és 1. félidőben gólszám 0,5 felett</p>
-          <p><strong>Odds:</strong> 1,96</p>
-          <p class="text-green-600 font-medium mt-2">Indoklás: Everton hazai pályán stabil, az első félidőkben aktívan kezdenek, így várható gól.</p>
+          <h3 class="font-semibold text-lg">E. Frankfurt-Mainz</h3>
+          <p class="text-sm text-slate-600 mt-1">Bundesliga • 2025.11.09</p>
+          <p class="mt-3"><strong>Tipp:</strong> Büntetőlap-szám 3,5 fölött és Mindkét csapat szerez gólt (Igen)</p>
+          <p><strong>Odds:</strong> 2,31</p>
+          <p class="text-green-600 font-medium mt-2">Indoklás: Mindkét csapat elől veszélyes, ezért várható gól mindkét oldalon, 
+          és a kemény játék miatt több lap is lehet.</p>
         </div>
       </div>
-      <p class="mt-6 text-right font-semibold text-slate-700">Összesített odds: 7,33</p>
+      <p class="mt-6 text-right font-semibold text-slate-700">Összesített odds: 8,74</p>
     </section>
-
     <!-- Lábjegyzet -->
     <footer class="mt-12 text-sm text-slate-500 fade-in text-center pb-6">
       © <span id="year"></span> Tippmix Tippek | Csak szórakozási célra, felelősséggel fogadj!
@@ -80,4 +80,15 @@
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
+import { motion } from "framer-motion";
+
+function NapiForma({ tips }) {
+  const total = tips.length;
+  const won = tips.filter(t => t.status === "win").length;
+  const lost = tips.filter(t => t.status === "lose").length;
+  const successRate = total > 0 ? Math.round((won / total) * 100) : 0;
+
+  let message = "Még nincs elég tipp a formához.";
+  let color = "bg-gray-
+
 </html>
